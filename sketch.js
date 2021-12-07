@@ -44,8 +44,7 @@ function draw() {
 }
 
   if(rat.isTouching(fox)){
-    rat.destroy();
-    gameState == "end"
+    gameState === end;
   }
 
   if(background.x < 0){
@@ -66,7 +65,9 @@ function draw() {
  drawSprites();
 
  if(gameState === "end"){
-  text("Game Over!",250,250);
+  text("Game Over!",300,300);
+  textSize(25);
+  
   fox.velocityX = 0;
   rat.velocityX = 0;
   background.velocityX = 0;
